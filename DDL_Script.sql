@@ -94,6 +94,7 @@ CREATE TABLE IF NOT EXISTS has_category (
     product_id CHAR(10) REFERENCES product(product_id),
     PRIMARY KEY (cat_name, product_id)
 );
+
 CREATE TABLE IF NOT EXISTS has_subcategory (
     sub_cat_name VARCHAR REFERENCES sub_category(sub_cat_name),
     product_id CHAR(10) REFERENCES product(product_id),
@@ -124,6 +125,7 @@ CREATE TABLE IF NOT EXISTS "order" (
     order_date DATE NOT NULL,
     total_order_cost DECIMAL(10, 2) NOT NULL
 );
+
 CREATE TABLE IF NOT EXISTS shipping_status (
     tracking_id CHAR(10) PRIMARY KEY,
     delivered_date DATE,
@@ -141,6 +143,7 @@ CREATE TABLE IF NOT EXISTS has_order (
 CREATE TABLE IF NOT EXISTS inv_house(
     inv_house_name VARCHAR PRIMARY KEY
 );
+
 CREATE TABLE IF NOT EXISTS shipper (
     shipper_id CHAR(10) PRIMARY KEY,
     shipper_name VARCHAR NOT NULL,
