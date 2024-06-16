@@ -5,22 +5,22 @@ This project focuses on developing a robust database management system for eBay.
 ## Project Focus
 
 The eBay database system simplifies operations and improves user experience by managing:
-- **User Information:** Profiles of buyers and sellers.
-- **Product Listings:** Comprehensive data on items available for sale.
-- **Inventory Management:** Tracking and control of product availability.
-- **Order Tracking:** ecording the status of orders placed by buyers.
-- **Transaction Data:**  Records of transactions using transaction id.
+- **`User Information`:** Profiles of buyers and sellers.
+- **`Product Listings`:** Comprehensive data on items available for sale.
+- **`Inventory Management`:** Tracking and control of product availability.
+- **`Order Tracking`:** ecording the status of orders placed by buyers.
+- **`Transaction Data`:**  Records of transactions using transaction id.
 
 ## Key Components
 
-- **Database:** PostgreSQL
-- **Entity Relationship Model:** Visual representation of our database structure.
-- **Relational Model:** Detailed schema design derived from our entity-relationship model.
-- **Functional Dependencies:** Defined relationships between attributes.
-- **Normalization (BCNF):** Ensuring data integrity through rigorous normalization.
-- **PostgreSQL DDL Schema Implementation:** Scripts for creating tables and defining relationships.
-- **PostgreSQL DML Data Insertion:** Scripts for populating the database with sample data.
-- **SQL Sample Queries:** Examples of queries for data retrieval and manipulation.
+- **`Database`:** PostgreSQL
+- **`Entity Relationship Model`:** Visual representation of our database structure.
+- **`Relational Model`:** Detailed schema design derived from our entity-relationship model.
+- **`Functional Dependencies`:** Defined relationships between attributes.
+- **`Normalization (BCNF)`:** Ensuring data integrity through rigorous normalization.
+- **`PostgreSQL DDL Schema Implementation`:** Scripts for creating tables and defining relationships.
+- **`PostgreSQL DML Data Insertion`:** Scripts for populating the database with sample data.
+- **`SQL Sample Queries`:** Examples of queries for data retrieval and manipulation.
 
 ## Future Enhancements
 
