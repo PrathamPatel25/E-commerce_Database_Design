@@ -137,35 +137,32 @@ E-commerce_Database_Design/
 
 ## 🔍 Sample Queries
 
-### Find Top-Selling Products
+### Fetch Sellers with the Most Products Listed
 
 ```sql
-SELECT p.product_name, COUNT(ho.product_id) as total_orders
-FROM product p
-JOIN has_order ho ON p.product_id = ho.product_id
-GROUP BY p.product_id, p.product_name
-ORDER BY total_orders DESC
-LIMIT 5;
-```
-
-### Get User's Cart Contents
-
-```sql
-SELECT p.product_name, p.price, p.description
-FROM product p
-JOIN contains c ON p.product_id = c.product_id
-JOIN cart ct ON c.user_id = ct.user_id
-WHERE ct.user_id = 'USER_ID';
-```
-
-### Calculate Seller Revenue
-
-```sql
-SELECT s.user_id, SUM(p.price) as total_revenue
+SELECT s.user_id, s.item_sold, COUNT(p.product_id) AS product_count
 FROM seller s
 JOIN product p ON s.user_id = p.product_seller_id
-JOIN has_order ho ON p.product_id = ho.product_id
-GROUP BY s.user_id;
+GROUP BY s.user_id, s.item_sold
+ORDER BY product_count DESC
+LIMIT 10;
+```
+
+### Fetch Sellers with Products Sold Out:
+
+```sql
+SELECT s.user_id, s.item_sold
+FROM seller s
+JOIN product p ON s.user_id = p.product_seller_id
+WHERE p.available_units = 0;
+```
+
+### Fetch Orders and Their Shipping Status:
+
+```sql
+SELECT o.order_id, ss.tracking_id, ss.delivery_status
+FROM "order" o
+LEFT JOIN shipping_status ss ON o.order_id = ss.order_id;
 ```
 
 ## 📈 Database Features
